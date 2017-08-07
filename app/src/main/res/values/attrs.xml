@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="TransitionalImageView">
+        <attr name="res_id" format="reference" />
+        <attr name="img_url" format="string" />
+    </declare-styleable>
+    
+</resources>
