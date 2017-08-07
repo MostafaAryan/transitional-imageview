@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ariannejad.mostafa.shared_element_image_view.com.mostafaaryan.transitionimageview.LargeImageActivity">
+    tools:context="com.mostafaaryan.transitionalimageview.controller.LargeImageActivity">
 
     <View
         android:id="@+id/background"
