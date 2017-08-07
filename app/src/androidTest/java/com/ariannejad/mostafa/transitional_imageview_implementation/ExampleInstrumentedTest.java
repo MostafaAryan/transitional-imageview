@@ -1,4 +1,4 @@
-package com.ariannejad.mostafa.shared_element_image_view;
+package com.ariannejad.mostafa.transitional_imageview_implementation;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

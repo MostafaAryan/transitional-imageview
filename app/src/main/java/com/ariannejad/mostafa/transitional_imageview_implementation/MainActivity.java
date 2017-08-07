@@ -1,4 +1,4 @@
-package com.ariannejad.mostafa.shared_element_image_view;
+package com.ariannejad.mostafa.transitional_imageview_implementation;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ariannejad.mostafa.shared_element_image_view.MainActivity">
+    tools:context="com.ariannejad.mostafa.transitional_imageview_implementation.MainActivity">
 
     <com.mostafaaryan.transitionalimageview.TransitionalImageView
         android:id="@+id/sample_image"
