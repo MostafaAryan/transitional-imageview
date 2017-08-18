@@ -23,7 +23,7 @@ Add dependency in your app level build.gradle.
 Create TransitionalImageView in your layout xml file.
 
     <com.mostafaaryan.transitionalimageview.TransitionalImageView
-            android:id="@+id/sample_image"
+            android:id="@+id/transitional_image"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
@@ -33,6 +33,7 @@ Create TransitionalImageView in your layout xml file.
 #### Step 3
 Use builder pattern to build a TransitionalImage object and set object to your TransitionalImageView (previously added to layout xml file).
 
+    TransitionalImageView transitionalImageView = (TransitionalImageView) findViewById(R.id.transitional_image);
     TransitionalImage transitionalImage = new TransitionalImage.Builder()
                                         .duration(500)
                                         .backgroundColor(ContextCompat.getColor(MainActivity.this, R.color.color))
@@ -40,7 +41,7 @@ Use builder pattern to build a TransitionalImage object and set object to your T
                                         /* or */
                                         .image(bitmap)
                                         .create();
-    TransitionalImageView transitionalImageView.setTransitionalImage(transitionalImage);
+    transitionalImageView.setTransitionalImage(transitionalImage);
     
 #### Final step
 Nothing really! Just build your app, click on the image and watch the magic happen ;) .
