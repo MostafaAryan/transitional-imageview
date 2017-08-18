@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <com.mostafaaryan.transitionalimageview.TransitionalImageView
+            android:id="@+id/shoe_image"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true" />
+
+        <LinearLayout
+            android:id="@+id/item_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/shoe_image"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:id="@+id/shoe_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:maxLines="2"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/shoe_sizes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="@color/gray"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/item_details"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:src="@drawable/shopping_cart"
+            android:background="@color/pink"/>
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

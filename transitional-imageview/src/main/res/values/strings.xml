@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">TransitionImageView</string>
+    <string name="app_name">Transitional imageView</string>
 
     <string name="view_location_left">view_loaction_left</string>
     <string name="view_location_top">view_location_top</string>
@@ -8,6 +8,7 @@
     <string name="view_height">view_height</string>
     <string name="view_info">view_info</string>
     <string name="image_res_id">image_res_id</string>
-    <string name="image_url">image_url</string>
+    <string name="image_byte_array">image_byte_array</string>
+    <string name="transitional_image">transitional_image</string>
 
 </resources>

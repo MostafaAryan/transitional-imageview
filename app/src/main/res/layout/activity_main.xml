@@ -4,19 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ariannejad.mostafa.transitional_imageview_implementation.MainActivity">
+    tools:context="com.ariannejad.mostafa.transitional_imageview_implementation.controller.MainActivity">
 
     <com.mostafaaryan.transitionalimageview.TransitionalImageView
         android:id="@+id/sample_image"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/shoes_button"
+        android:layout_marginBottom="30dp"
         android:scaleType="fitXY"
         android:adjustViewBounds="true"
         app:res_id="@drawable/sample_image" />
-    <!--app:img_url="https://image.freepik.com/free-icon/android-logo_318-54237.jpg"-->
+
+    <Button
+        android:id="@+id/shoes_button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/pink"
+        android:text="Shoes"
+        android:textAllCaps="false"
+        android:onClick="onClickShoes"/>
 
 </RelativeLayout>

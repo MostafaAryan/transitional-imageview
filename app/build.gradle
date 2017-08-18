@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
     defaultConfig {
-        applicationId "com.ariannejad.mostafa.shared_element_image_view"
+        applicationId "com.ariannejad.mostafa.transitional_imageview_implementation"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
@@ -22,6 +22,14 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
 
-    compile 'com.android.support:appcompat-v7:26.+'
     compile project(':transitional-imageview')
+    /*compile 'com.github.bumptech.glide:glide:4.0.0'*/
+    //    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:recyclerview-v7:26.+'
+    compile "com.android.support:cardview-v7:26.+"
+    compile "com.android.support:design:26.+"
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
