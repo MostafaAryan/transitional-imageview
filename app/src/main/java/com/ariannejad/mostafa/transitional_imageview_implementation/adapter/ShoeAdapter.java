@@ -62,7 +62,7 @@ public class ShoeAdapter extends RecyclerView.Adapter<ShoeAdapter.ViewHolder> {
                         @Override
                         public void run() {
                             TransitionalImage transitionalImage = new TransitionalImage.Builder()
-                                    .duration(300)
+                                    .duration(500)
                             /*.backgroundColor(ContextCompat.getColor(, R.color.colorAccent))*/
                                     /*.image(R.drawable.sample_image)*/
                                     .image(bitmap)
