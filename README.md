@@ -1,5 +1,8 @@
 # Transitional ImageView
 
+[![](https://jitpack.io/v/mostafaaryannejad/transitional-imageview.svg)](https://jitpack.io/#mostafaaryannejad/transitional-imageview)
+
+
 This is an imageView which implement shared element transition pattern on your desired image.
  
  
