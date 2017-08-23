@@ -1,1 +1,6 @@
 language: android
+
+licenses:
+    - 'android-sdk-preview-license-52d11cd2'
+    - 'android-sdk-license-26'
+    - 'google-gdk-license-26'
