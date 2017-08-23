@@ -3,8 +3,12 @@
 This is an imageView which implement shared element transition pattern on your desired image.
  
  
- ![](https://raw.githubusercontent.com/MostafaAryan/transitional-imageview/master/app/src/main/res/drawable/shoe-app-demo.gif)
-
+ ![](https://raw.githubusercontent.com/MostafaAryan/transitional-imageview/master/app/src/main/res/drawable/shoe-app-demo.gif)  
+  
+  
+  
+  
+## Usage:
 #### Step 1
 
 Add JitPack repository in your root build.gradle at the end of repositories.
@@ -48,3 +52,70 @@ Use builder pattern to build a TransitionalImage object and set object to your T
     
 #### Final step
 Nothing really! Just build your app, click on the image and watch the magic happen ;) .
+
+## Customization
+
+You can set image resource id in xml tag:
+
+    app:res_id="@drawable/sample_image"
+    
+Or set it in builder pattern:
+
+    .image(R.drawable.sample_image)
+    
+Also you can pass image as a bitmap:
+
+    .image(bitmap)
+    
+Customization of transitional animation duration & background color for transitioned screen is possible.
+
+    .duration(500)
+    .backgroundColor(ContextCompat.getColor(MainActivity.this, R.color.color))
+
+
+#### Display images using image downloading libraries
+
+##### Picasso
+    AsyncTask.execute(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        final Bitmap bitmap = Picasso.with(MainActivity.this).load(imageUrl).get();
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                /* Build new TransitionalImage using builder pattern and set it to your TransitionalImageView. */
+                            }
+                        });
+                    } catch (IOException e) {e.printStackTrace();}
+                }
+            });
+         
+##### Glide
+    Glide.with(this).asBitmap().load(imageUrl).into(new SimpleTarget<Bitmap>() {
+        @Override
+        public void onResourceReady(Bitmap bitmap, Transition<? super Bitmap> transition) {
+        /* Build new TransitionalImage using builder pattern and set it to your TransitionalImageView. */
+        }
+    });
+    
+##### Universal Image Loader
+
+        ImageLoader imageLoader = ImageLoader.getInstance();
+        imageLoader.init(ImageLoaderConfiguration.createDefault(this));
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                DisplayImageOptions dio = new DisplayImageOptions.Builder()
+                        .cacheInMemory(false).build();
+                final Bitmap bmp = imageLoader.loadImageSync(imageUrl, dio);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        /* Build new TransitionalImage using builder pattern and set it to your TransitionalImageView. */                    
+                    }
+                });
+            }
+        });
+        
+        
