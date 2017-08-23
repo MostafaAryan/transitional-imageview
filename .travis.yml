@@ -3,7 +3,7 @@ sudo: true
 
 components:
     - tools
-    - build-tools-25.0.3
+    - build-tools-25.0.2
     - platform-tools
     - android-25
 
