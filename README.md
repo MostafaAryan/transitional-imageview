@@ -6,7 +6,7 @@
 This is an imageView which implement shared element transition pattern on your desired image.
  
  
- ![](https://raw.githubusercontent.com/MostafaAryan/transitional-imageview/master/app/src/main/res/drawable/shoe-app-demo.gif)  
+ ![](https://github.com/MostafaAryan/transitional-imageview/blob/master/app/src/main/res/drawable/shoe_app_demo.gif?raw=true)  
   
   
   
