@@ -1,6 +1,9 @@
 # Transitional ImageView
 
-This is an imageView which implement shared element transition pattern on your desired image. 
+This is an imageView which implement shared element transition pattern on your desired image.
+ 
+ 
+ ![](https://raw.githubusercontent.com/MostafaAryan/transitional-imageview/master/app/src/main/res/drawable/shoe-app-demo.gif)
 
 #### Step 1
 
