@@ -3,7 +3,7 @@
 [![](https://jitpack.io/v/mostafaaryannejad/transitional-imageview.svg)](https://jitpack.io/#mostafaaryannejad/transitional-imageview)
 
 
-This is an imageView which implement shared element transition pattern on your desired image.
+This is an imageView which implements shared element transition pattern on your desired image.
  
  
  ![](https://github.com/MostafaAryan/transitional-imageview/blob/master/app/src/main/res/drawable/shoe_app_demo.gif?raw=true)  
