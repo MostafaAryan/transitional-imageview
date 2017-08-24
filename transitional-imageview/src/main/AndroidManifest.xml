@@ -2,7 +2,7 @@
 
     package="com.mostafaaryan.transitionalimageview">
 
-    <application android:allowBackup="false" android:label="@string/app_name"
+    <application android:allowBackup="true" android:label="@string/app_name"
         android:supportsRtl="true">
 
         <activity android:name="com.mostafaaryan.transitionalimageview.controller.LargeImageActivity"
