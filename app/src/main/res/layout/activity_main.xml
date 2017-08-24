@@ -14,8 +14,9 @@
         android:layout_above="@+id/shoes_button"
         android:layout_marginBottom="30dp"
         android:scaleType="fitXY"
-        android:adjustViewBounds="true"
-        app:res_id="@drawable/sample_image" />
+        android:adjustViewBounds="true" />
+    <!--app:res_id="@drawable/sample_image"-->
+
 
     <Button
         android:id="@+id/shoes_button"

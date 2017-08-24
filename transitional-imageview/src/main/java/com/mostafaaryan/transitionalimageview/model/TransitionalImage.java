@@ -25,12 +25,21 @@ public class TransitionalImage implements Parcelable {
         this.imageByteArray = imageByteArray;
     }
 
+    public TransitionalImage(int imageResId) {
+        this.imageResId = imageResId;
+        this.duration = -1;
+        this.backgroundColor = -1;
+    }
+
     public TransitionalImage (Parcel in) {
         this.duration = in.readInt();
         this.backgroundColor= in.readInt();
         this.imageResId = in.readInt();
-        this.imageByteArray = new byte[in.readInt()];
-        in.readByteArray(this.imageByteArray);
+        int imageByteArrayLength = in.readInt();
+        if(imageByteArrayLength > 0) {
+            this.imageByteArray = new byte[imageByteArrayLength];
+            in.readByteArray(this.imageByteArray);
+        }
     }
 
     @Override
@@ -43,7 +52,7 @@ public class TransitionalImage implements Parcelable {
         parcel.writeInt(duration);
         parcel.writeInt(backgroundColor);
         parcel.writeInt(imageResId);
-        parcel.writeInt(imageByteArray.length);
+        if(imageByteArray != null) parcel.writeInt(imageByteArray.length);
         parcel.writeByteArray(imageByteArray);
     }
 
@@ -71,6 +80,10 @@ public class TransitionalImage implements Parcelable {
 
     public int getImageResId() {
         return imageResId;
+    }
+
+    public void setImageResId(int imageResId) {
+        this.imageResId = imageResId;
     }
 
     public byte[] getImageByteArray() {

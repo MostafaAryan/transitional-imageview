@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                             TransitionalImage transitionalImage = new TransitionalImage.Builder()
                                     .duration(500)
                                     .backgroundColor(ContextCompat.getColor(MainActivity.this, R.color.colorAccent))
-                                    /*.image(R.drawable.sample_image)*/
+                                    //.image(R.drawable.sample_image)
                                     .image(b)
                                     .create();
                             tiv.setTransitionalImage(transitionalImage);

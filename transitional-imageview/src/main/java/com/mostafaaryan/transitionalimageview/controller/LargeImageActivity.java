@@ -57,7 +57,7 @@ public class LargeImageActivity extends AppCompatActivity {
         if(transitionalImage.getImageResId() != -1) {
             largeImage.setImageResource(transitionalImage.getImageResId());
             setProperties();
-        } else if(byteArray.length > 0) {
+        } else if(byteArray != null && byteArray.length > 0) {
             largeImage.setImageBitmap(Utils.byteArrayToBitmap(byteArray));
             setProperties();
         } else finish();

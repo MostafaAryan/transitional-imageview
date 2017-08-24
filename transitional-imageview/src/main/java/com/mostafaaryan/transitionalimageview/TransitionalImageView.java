@@ -23,7 +23,7 @@ import com.mostafaaryan.transitionalimageview.utils.Utils;
 
 public class TransitionalImageView extends AppCompatImageView {
 
-    private int imageResId = 0;
+    private int imageResId = -1;
     private byte[] imageByteArray;
     private TransitionalImage transitionalImage;
 
@@ -36,10 +36,10 @@ public class TransitionalImageView extends AppCompatImageView {
         super(context, attrs);
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.TransitionalImageView);
-        imageResId = a.getResourceId(R.styleable.TransitionalImageView_res_id, 0);
+        imageResId = a.getResourceId(R.styleable.TransitionalImageView_res_id, -1);
         a.recycle();
 
-        if (imageResId != 0) setImageResource(imageResId);
+        if (imageResId != -1) setImageResource(imageResId);
 
         setOnImageClickListener();
     }
@@ -49,8 +49,13 @@ public class TransitionalImageView extends AppCompatImageView {
     }
 
     public void setTransitionalImage(TransitionalImage transitionalImage) {
-        if(transitionalImage.getImageByteArray().length > 0)
-            this.setImageBitmap(Utils.byteArrayToBitmap(transitionalImage.getImageByteArray()));
+        if(imageResId == -1) {
+            if(transitionalImage.getImageByteArray() != null && transitionalImage.getImageByteArray().length > 0)
+                this.setImageBitmap(Utils.byteArrayToBitmap(transitionalImage.getImageByteArray()));
+            else if ((imageResId = transitionalImage.getImageResId()) != -1) {
+                setImageResource(imageResId);
+            }
+        }
 
         this.transitionalImage = transitionalImage;
     }
@@ -60,6 +65,11 @@ public class TransitionalImageView extends AppCompatImageView {
         setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                if(imageResId != -1) {
+                    if(transitionalImage != null) transitionalImage.setImageResId(imageResId);
+                    else transitionalImage = new TransitionalImage(imageResId);
+                }
 
                 Intent intent = new Intent(getContext(), LargeImageActivity.class);
                 /*intent.putExtra(getResources().getString(R.string.image_res_id), imageResId);*/
