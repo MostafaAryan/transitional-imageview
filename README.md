@@ -26,7 +26,7 @@ Add JitPack repository in your root build.gradle at the end of repositories.
 Add dependency in your app level build.gradle.
 
     dependencies {
-        compile 'com.github.MostafaAryan:transitional-imageview:v0.2'
+        compile 'com.github.mostafaaryan:transitional-imageview:v0.2.1'
     }
 
 #### Step 2
